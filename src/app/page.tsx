@@ -1,102 +1,300 @@
-import Image from "next/image";
+import { EmailForm } from './components/email-form';
+import { ArrowRight, CheckCircle, Smartphone, Link, BarChart3, Users, Globe, Zap, Sparkles, Image } from 'lucide-react';
 
-export default function Home() {
+export default function CatalogCoveLanding() {
+ 
+  const features = [
+    {
+      icon: <Sparkles className="h-6 w-6" />,
+      title: "AI-Powered Product Details",
+      description: "Struggling with product titles and descriptions? Our AI suggests compelling copy that sells, so you don't have to guess."
+    },
+    {
+      icon: <Image className="h-6 w-6" />,
+      title: "Auto Background Removal",
+      description: "Upload any product photo and we'll automatically remove the background for a clean, professional look."
+    },
+    {
+      icon: <Link className="h-6 w-6" />,
+      title: "Instant WhatsApp Links",
+      description: "Each product gets its own WhatsApp link. Customers can order with just one tap."
+    },
+    {
+      icon: <Smartphone className="h-6 w-6" />,
+      title: "Mobile-First Design",
+      description: "Your catalog looks perfect on every device, especially mobile where your customers are shopping."
+    }
+  ];
+
+  const benefits = [
+    "AI-suggested product titles & descriptions",
+    "Automatic background removal",
+    "No monthly hosting fees",
+    "No technical maintenance",
+    "Mobile-optimized catalogs",
+    "Direct WhatsApp integration"
+  ];
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-6">
+            <div className="flex items-center">
+              <div className="flex-shrink-0">
+                <h1 className="text-2xl font-bold text-gray-900">CatalogCove</h1>
+              </div>
+            </div>
+            <div className="">
+              <button className="bg-purple-700 text-white px-4 py-2 rounded-lg hover:bg-purple-800 transition-colors">
+                Join Waitlist
+              </button>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="pt-20 pb-32 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Your products.
+              <br />
+              <span className="text-purple-700">Their WhatsApp.</span>
+              <br />
+              Zero hassle.
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              We built CatalogCove for small business owners who want beautiful online catalogs 
+              but don't want to deal with hosting, maintenance, or writing product descriptions from scratch.
+            </p>
+            
+            {/* Email Signup Form - Replace this div with your widget embed code */}
+            <EmailForm />
+
+            <div className="flex flex-col md:flex-row md:items-center justify-center gap-6 text-sm text-gray-500">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-500" />
+                Free to start
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-500" />
+                No technical skills needed
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-500" />
+                Ready in minutes
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Story Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+  <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-bold text-gray-900 mb-6">
+        We built this for our friends
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        The real story behind CatalogCove
+      </p>
+    </div>
+    
+    <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center ">
+    <div className="bg-purple-50 p-8 rounded-2xl">
+        <div className="text-center">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-700 text-white rounded-full mb-6">
+            <Users className="h-8 w-8" />
+          </div>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Built by small business lovers
+          </h3>
+          <p className="text-gray-600 mb-6">
+            We've watched our friends struggle with overcomplicated solutions. 
+            CatalogCove is our answer - simple tools for real businesses.
+          </p>
+          <div className="space-y-3 flex flex-col justify-center items-start text-sm text-gray-600">
+            <div className="flex items-center justify-center gap-2">
+              <CheckCircle className="h-4 w-4 text-purple-700" />
+              No technical background needed
+            </div>
+            <div className="flex items-center justify-center gap-2">
+              <CheckCircle className="h-4 w-4 text-purple-700" />
+              AI helps with the hard parts
+            </div>
+            <div className="flex items-center justify-center gap-2">
+              <CheckCircle className="h-4 w-4 text-purple-700" />
+              Focus on selling, not tech
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="space-y-6">
+        <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-purple-700">
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">The Problem</h3>
+          <p className="text-gray-600">
+            Our friends run amazing small businesses - handmade jewelry, home bakeries, boutique crafts. 
+            They kept asking us to build them websites, but managing hosting, updates, and technical 
+            issues became a nightmare for everyone.
+          </p>
+        </div>
+        
+        <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-purple-700">
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">The Realization</h3>
+          <p className="text-gray-600">
+            They don't need complex e-commerce sites. They need simple, beautiful catalogs that 
+            connect directly to WhatsApp where their customers already are. Most orders happen 
+            through personal conversations anyway.
+          </p>
+        </div>
+        
+        <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-purple-700">
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">The Solution</h3>
+          <p className="text-gray-600">
+            So we built CatalogCove. No hosting headaches. No maintenance nightmares. 
+            No technical skills required. Just beautiful catalogs that work, with AI helping 
+            you write descriptions and clean up your photos.
+          </p>
+        </div>
+      </div>
+      
+     
+    </div>
+  </div>
+</section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Everything you need, nothing you don't
+            </h2>
+            <p className="text-lg text-gray-600">
+              We focused on the features that actually matter for small businesses.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                <div className="flex items-start gap-4">
+                  <div className="bg-purple-100 p-3 rounded-lg">
+                    <div className="text-purple-700">{feature.icon}</div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              From products to orders in minutes
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-purple-700">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Upload Your Products
+              </h3>
+              <p className="text-gray-600">
+                Add product photos, descriptions, and prices. Our mobile-first interface makes it quick and easy.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-purple-700">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Get Your Catalog Link
+              </h3>
+              <p className="text-gray-600">
+                Instantly get a beautiful catalog page with your unique link. Share it anywhere.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-purple-700">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Start Getting Orders
+              </h3>
+              <p className="text-gray-600">
+                Customers browse your catalog and tap to order directly via WhatsApp. Simple.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-20 bg-purple-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Why small businesses choose CatalogCove
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center gap-3 text-white">
+                <CheckCircle className="h-5 w-5 text-purple-200" />
+                <span>{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Ready to create your catalog?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Join hundreds of small business owners who are already on our waitlist.
+          </p>
+          
+          {/* Email Signup Form - Replace this div with your widget embed code */}
+          <EmailForm /> 
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold mb-4">CatalogCove</h3>
+            <p className="text-gray-400">
+              Beautiful catalogs for small businesses. No hosting headaches.
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   );
