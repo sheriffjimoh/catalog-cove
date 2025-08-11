@@ -42,7 +42,7 @@ export const EmailForm = () => {
   }
 
   return (
-    <div className="max-w-md mx-auto mb-8">
+    <div className="max-w-md mx-auto mb-8" >
       <div className="flex gap-4 flex-col md:flex-row">
         <input
           type="email"

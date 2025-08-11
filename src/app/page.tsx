@@ -1,5 +1,7 @@
 import { EmailForm } from './components/email-form';
-import { ArrowRight, CheckCircle, Smartphone, Link, BarChart3, Users, Globe, Zap, Sparkles, Image } from 'lucide-react';
+import {  CheckCircle, Smartphone,  Users, Sparkles, Image as LucideImage, Link as LucideLink} from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function CatalogCoveLanding() {
  
@@ -10,12 +12,12 @@ export default function CatalogCoveLanding() {
       description: "Struggling with product titles and descriptions? Our AI suggests compelling copy that sells, so you don't have to guess."
     },
     {
-      icon: <Image className="h-6 w-6" />,
+      icon: <LucideImage className="h-6 w-6" />,
       title: "Auto Background Removal",
       description: "Upload any product photo and we'll automatically remove the background for a clean, professional look."
     },
     {
-      icon: <Link className="h-6 w-6" />,
+      icon: <LucideLink className="h-6 w-6" />,
       title: "Instant WhatsApp Links",
       description: "Each product gets its own WhatsApp link. Customers can order with just one tap."
     },
@@ -43,13 +45,15 @@ export default function CatalogCoveLanding() {
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <h1 className="text-2xl font-bold text-gray-900">CatalogCove</h1>
+                <Link href="/" className="text-purple-700 font-bold text-xl">
+                <Image src="/images/logo.svg" alt="CatalogCove Logo" width={200} height={200} />
+                </Link>
               </div>
             </div>
             <div className="">
-              <button className="bg-purple-700 text-white px-4 py-2 rounded-lg hover:bg-purple-800 transition-colors">
+              <Link href="#join-waitlist" className="bg-purple-700 text-white px-4 py-2 rounded-lg hover:bg-purple-800 transition-colors">
                 Join Waitlist
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -58,13 +62,13 @@ export default function CatalogCoveLanding() {
       {/* Hero Section */}
       <section className="pt-20 pb-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center" id='join-waitlist'>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Your products.
+               Upload products.
               <br />
-              <span className="text-purple-700">Their WhatsApp.</span>
+              <span className="text-purple-700">Get your store link.</span>
               <br />
-              Zero hassle.
+              Receive WhatsApp orders.
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               We built CatalogCove for small business owners who want beautiful online catalogs 
@@ -287,15 +291,28 @@ export default function CatalogCoveLanding() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">CatalogCove</h3>
-            <p className="text-gray-400">
-              Beautiful catalogs for small businesses. No hosting headaches.
-            </p>
-          </div>
-        </div>
-      </footer>
+ <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+   <div className="text-center">
+     <h3 className="text-2xl font-bold mb-4">CatalogCove</h3>
+     <p className="text-gray-400 mb-6">
+       Beautiful catalogs for small businesses. No hosting headaches.
+     </p>
+     <div className="flex justify-center">
+       <a 
+         href="https://x.com/sherifdeenolat2" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         className="text-gray-400 hover:text-purple-400 transition-colors"
+         aria-label="Follow us on Twitter"
+       >
+         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+         </svg>
+       </a>
+     </div>
+   </div>
+ </div>
+</footer>
     </div>
   );
 }
