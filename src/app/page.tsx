@@ -72,7 +72,7 @@ export default function CatalogCoveLanding() {
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               We built CatalogCove for small business owners who want beautiful online catalogs 
-              but don't want to deal with hosting, maintenance, or writing product descriptions from scratch.
+              but don&apos;t want to deal with hosting, maintenance, or writing product descriptions from scratch.
             </p>
             
             {/* Email Signup Form - Replace this div with your widget embed code */}
@@ -118,7 +118,7 @@ export default function CatalogCoveLanding() {
             Built by small business lovers
           </h3>
           <p className="text-gray-600 mb-6">
-            We've watched our friends struggle with overcomplicated solutions. 
+            We&apos;ve watched our friends struggle with overcomplicated solutions. 
             CatalogCove is our answer - simple tools for real businesses.
           </p>
           <div className="space-y-3 flex flex-col justify-center items-start text-sm text-gray-600">
@@ -150,7 +150,7 @@ export default function CatalogCoveLanding() {
         <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-purple-700">
           <h3 className="text-lg font-semibold text-gray-900 mb-3">The Realization</h3>
           <p className="text-gray-600">
-            They don't need complex e-commerce sites. They need simple, beautiful catalogs that 
+            They don&apos;t need complex e-commerce sites. They need simple, beautiful catalogs that 
             connect directly to WhatsApp where their customers already are. Most orders happen 
             through personal conversations anyway.
           </p>
@@ -176,7 +176,7 @@ export default function CatalogCoveLanding() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Everything you need, nothing you don't
+              Everything you need, nothing you don&apos;t
             </h2>
             <p className="text-lg text-gray-600">
               We focused on the features that actually matter for small businesses.

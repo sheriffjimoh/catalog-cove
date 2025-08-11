@@ -34,7 +34,7 @@ export const EmailForm = () => {
       <div className="max-w-md mx-auto mb-8 text-center">
         <div className="bg-green-50 border border-green-200 rounded-lg p-4">
           <p className="text-green-800 font-medium">
-            🎉 You're on the list! We'll notify you when we launch.
+            🎉 You&apos;re on the list! We&apos;ll notify you when we launch.
           </p>
         </div>
       </div>
